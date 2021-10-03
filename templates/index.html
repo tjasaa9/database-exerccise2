@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yet another database exercise</title>
+</head>
+<body>
+
+    <h1>Dude. Database.</h1>
+
+
+    {% if user %}
+        <p>Hello {{user.name}}</p>
+        <p>Your email address: {{user.email}}</p>
+
+            <form action="/login-clear" method="POST">
+            <button>Clear</button>
+            </form>
+        
+    {% else %}
+        <form action="/login" method="post">
+            <input type="text" name="user-name" placeholder="Enter your name "><br>
+            <input type="email" name="user-email" placeholder="Enter your email address"><br>
+
+            <button>Submit</button>
+        </form>
+    {% endif %}
+    
+
+
+    
+</body>
+</html>
